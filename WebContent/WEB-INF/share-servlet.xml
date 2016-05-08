@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<!-- 在此添加控制器的映射路径 -->
+	<context:component-scan base-package="cn.dayuanzi.controller.share" />
+
+	<bean id="shareInterceptor" class="cn.dayuanzi.web.filter.ShareInterceptor">
+		<property name="ignore" >
+			<list>
+				
+            </list>
+		</property>
+	</bean>
+	
+	<!-- 有新增加的拦截器加入到下面的列表中 -->
+	<bean id="handlerMapping" class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+		<property name="interceptors">
+			<list>
+				<ref bean="shareInterceptor"/>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- freemarker的配置 -->  
+    <bean id="freemarkerConfigurer" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">  
+        <property name="templateLoaderPath" value="/html/" />  
+        <property name="defaultEncoding" value="utf-8" />  
+        <property name="freemarkerSettings">  
+            <props>  
+                <prop key="template_update_delay">10</prop>  
+                <prop key="locale">zh_CN</prop>  
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>  
+                <prop key="date_format">yyyy-MM-dd</prop>  
+                <prop key="number_format">#.##</prop>  
+            </props>  
+        </property>  
+    </bean>
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="order" value="0" />
+		<property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView" />  
+        <property name="suffix" value=".html" />  
+        <property name="contentType" value="text/html;charset=utf-8" />  
+        <property name="exposeRequestAttributes" value="true" />  
+        <property name="exposeSessionAttributes" value="true" />  
+        <property name="exposeSpringMacroHelpers" value="true" />
+	</bean>
+	
+</beans>

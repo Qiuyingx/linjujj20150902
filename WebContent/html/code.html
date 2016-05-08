@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"> 
+<title>邀请码分享</title>
+
+<style type="text/css">
+	/** 通用样式 **/
+	
+	*{margin:0; padding:0; font-family:微软雅黑;}
+	body{background-color: #ffffff; }
+	a{text-decoration: none;}
+	
+	.bk_white{background-color: #ffffff;}
+	.content{margin-bottom:60px;}
+	.margin_top_60{margin-top:30px;}
+	.margin_top_120{margin-top:100px;}
+	
+	/** 顶部 **/
+	.div_top_outer{width:100%; height:60px; line-height:60px; position:fixed; top:0;}
+	.div_top_content{width:92%; margin-left:4%; }
+	.div_top_img{margin-top:10px;}
+	.div_top_text{float:right; margin-top:-30px;}
+	
+	/**  邀请码  **/
+ 	.imgDiv{}
+	.imgDiv img{min-width:150px; max-width:350px;}
+	.imgDiv span{color:#1e1d2f; font-size:24px; letter-spacing:4px; margin-top:-500px;  }
+	.codeSpan{margin-top:-140px;}
+	
+	/**  底部文字描述 **/
+	.textDiv{margin-top:120px; text-align:left; width: 85%; color:#585766; font-size:15px;}
+	
+	/**底部浮动下载按钮**/
+	.div_dw_float{color:#ffffff; font-size:17px; width:100%; height:50px; line-height:50px;  text-align:center; letter-spacing:1px;background-color:#96ca63; position:fixed; bottom:0px;}
+
+</style>
+
+</head>
+
+<body>
+	<div>
+		  <!-- 顶部浮动内容 -->
+		  <div class="div_top_outer bk_white">
+		  		<div class="div_top_content">
+					<!-- 左侧Icon -->
+					<div class="div_top_img">
+						<img src="../img/icon.png" height="40px" />
+					</div>
+					<!--  右侧文字 -->
+					<div class="div_top_text">
+						<img src="../img/words.png" height="20px;" />
+					</div>
+				</div>
+		  </div>
+			<!-- 邀请码 -->
+			<div class="imgDiv margin_top_120">
+				<center>
+					<!-- 底部图片 -->
+					<div>
+						<img src="../img/code_back.png" width="180px"/>
+					</div>
+					<!--  用户邀请码 -->	
+					<div class="codeSpan">
+						<span>${model.userId}</span>
+					</div>
+				</center>
+			</div>
+			
+			<!--  底部文字描述 -->
+			<center>
+				<div class="textDiv">
+					为了让邻聚平台更有趣，你可以将你的邀请码分享给更多邻居。
+				</div>
+			</center>
+	</div>
+			  
+  <!-- 底部浮动下载 -->
+  <a href="http://123.57.218.131/upload/upload.html">
+	  <div class="div_dw_float">
+			下载邻聚，发现更多有趣的邻居
+	  </div>
+  </a>
+</body>
+</html>

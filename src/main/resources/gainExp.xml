@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+获取经验配置
+id:获取经验的场景标识，唯一
+remark:场景描述
+exp:每次可以获得的经验
+limitDaily:每日获取的限制次数 
+ -->
+<gainExp>
+	<scene id="1" remark="注册" exp="20"  dec="一次性发放"  image="Image/ExpImage/12.png" />
+	<scene id="2" remark="社区认证" exp="30" limitDaily="1" dec="一次性发放" image="Image/ExpImage/8.png"/>
+	<scene id="3" remark="资料完善" exp="10" limitDaily="1"  dec="一次性发放" image="Image/ExpImage/13.png"/>
+	<scene id="4" remark="每日签到" exp="1"  dec="每日1次" image="Image/ExpImage/1.png"/>
+	<scene id="5" remark="连续七日签到" exp="10"  dec="每七天一次 " image="Image/ExpImage/11.png"/>
+	<scene id="6" remark="发话题" exp="1"  limitDaily="2"  dec="每日2次" image="Image/ExpImage/3.png"/>
+	<scene id="7" remark="发邀约" exp="5" limitDaily="1"  dec="每日1次" image="Image/ExpImage/4.png"/>
+	<scene id="8" remark="发帮帮" exp="1" limitDaily="1"  dec="每日1次 " image="Image/ExpImage/2.png"/>
+	<scene id="9" remark="采纳回复" exp="10" limitDaily="1" dec="每日1次" image="Image/ExpImage/14.png"/>
+	<scene id="10" remark="评论" exp="2" limitDaily="2"  dec="每日2次" image="Image/ExpImage/5.png"/>
+	<scene id="11" remark="被感谢" exp="1" limitDaily="2"  dec="每日10次" image="Image/ExpImage/6.png"/>
+	<scene id="12" remark="邀请邻居" exp="20" dec="不限制" image="Image/ExpImage/7.png"/>
+	<scene id="13" remark="邀请非邻居" exp="5"  dec="不限制" image="Image/ExpImage/15.png"/>
+	<scene id="14" remark="官方活动报名并签到" exp="20"  dec="一次性发放" image="Image/ExpImage/13.png"/>
+	<scene id="15" remark="介绍自己"  limitDaily="1" exp="2" dec="一次性发放" image="Image/ExpImage/16.png"/>
+<!--	 <scene id="16" remark="完成任务" exp="1" dec="一次性发放" image="Image/ExpImage/9.png"/>
+	<scene id="17" remark="其他活动" exp="1" dec="一次性发放" image="Image/ExpImage/10.png"/>-->
+</gainExp>
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tags>
+	
+	<tag id="1" name="钢琴"/>
+	<tag id="2" name="美术"/>
+	<tag id="3" name="舞蹈"/>
+	<tag id="4" name="英语"/>
+	<tag id="5" name="瑜伽"/>
+	<tag id="6" name="烘培"/>
+	<tag id="7" name="摄影"/>
+	<tag id="8" name="咖啡"/>
+	<tag id="10" name="手工DIY"/>
+	<tag id="11" name="花艺"/>
+	<tag id="12" name="茶艺"/>
+	<tag id="13" name="陶瓷"/>
+	<tag id="14" name="击剑"/>
+	<tag id="15" name="跆拳道"/>
+	<tag id="16" name="射箭"/>
+	<tag id="17" name="健身"/>
+</tags>

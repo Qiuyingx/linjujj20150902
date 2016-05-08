@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/> 
+<title>邀约详情</title>
+<!-- 帖子详情分享页 -->
+
+<style type="text/css">
+	/** 通用样式 **/
+	
+	*{margin:0; padding:0; font-family:微软雅黑;}
+	body{background-color: #c8c7cd; }
+	a{text-decoration: none; color:#ffffff}
+	
+	.bk_white{background-color: #ffffff;}
+	.content{margin-bottom:60px;}
+	
+	/** 顶部 **/
+	.div_top_outer{width:100%; height:60px; line-height:60px; position:fixed; top:0;}
+	.div_top_content{width:92%; margin-left:4%; }
+	.div_top_img{margin-top:10px;}
+	.div_top_text{float:right; margin-top:-30px;}
+	
+	/** 内容展示区 **/
+	.div_content{width:100%; margin-top:61px;}
+	.div_content_inner{width:92%; margin-left:4%;}
+	.div_content_title{color:#494848; font-size:18px; font-weight:700; letter-spacing:1px; padding-top: 15px;}
+	.div_time{margin-top:5px;}
+	.span_time{color:#9d9c9c; font-size:12px;}
+	.span_from{color:#72809d; font-size:12px; margin-left:15px;}
+	.div_content_html{margin-top:15px; color:#676767; font-size:16px; }
+	
+	/** 评论区 **/
+	.comment_title{color:#494848; font-size:16px; font-weight:700; letter-spacing:2px; height:65px; line-height:65px;}
+	.cm_item_face img{width:45px; border-radius:5px;}
+	
+	/**评论项**/
+	.cm_item_nickname{color:#3f5a92; font-size:16px; margin-top:-40px; margin-left:60px;}
+	.cm_item_time{color:#a5a5a5; font-size:11px; margin-top:6px; margin-left:60px;}
+	.cm_item_com{margin-top:-35px; float:right;}
+	.cm_item_content{margin-left:60px; padding-top:10px; padding-bottom:15px; font-size:16px; color:#767676;}
+	
+	.hrDiv{height:1px;background-color:#e2e2e2; margin-top:5px; margin-bottom:20px;}
+	
+	/**底部浮动下载按钮**/
+	.div_dw_float{color:#ffffff; font-size:17px; width:100%; height:50px; line-height:50px; text-align:center; letter-spacing:1px;background-color:#96ca63; position:fixed; bottom:0px;}
+</style>
+</head>
+
+<body>
+
+	<div>
+		  <!-- 顶部浮动内容 -->
+		  <div class="div_top_outer bk_white">
+		  		<div class="div_top_content">
+					<!-- 左侧Icon -->
+					<div class="div_top_img">
+						<img src="../img/icon.png" height="40px" />
+					</div>
+					<!--  右侧文字 -->
+					<div class="div_top_text">
+						<img src="../img/words.png" height="20px;" />
+					</div>
+				</div>
+		  </div>
+		  
+		  <!-- 内容展示区 -->
+		  <div class="div_content bk_white">
+		  		<div class="div_content_inner">
+				 	<!-- 标题 -->
+					<div class="div_content_title">
+						#${model.activity_type} ${model.share_activity_time} ${model.activity_place}
+					</div>
+					<!-- 时间 -->
+					<div class="div_time">
+						<span class="span_time">${model.send_time}</span><span class="span_from">${model.sender_name}</span>
+					</div>
+					<!-- 图文内容 -->
+					<div class="div_content_html">
+						            ${model.content}
+						            <#if model.images??>
+									<#list model.images as image>
+										<img src="../../${image}" width="100%" style="margin-top:10px"/>
+									</#list>
+									</#if>
+					</div>
+					<!-- 帖子评论区 -->
+					<div style="padding-bottom:60px;">
+						<div class="comment_title">评论</div>
+						<!-- 评论项展示 -->
+						<div class="cm_list">
+							<#if model.replys??>
+								<#list model.replys as reply>
+									<div class="cm_item">
+										<!-- 头像 -->
+										<div class="cm_item_face"><img src="../../${reply.senderHeadIcon}" /></div>
+										<!--  基础信息 -->
+										<div class="cm_item_base">
+											<div class="cm_item_nickname">${reply.senderName}</div>
+											<div class="cm_item_time">${reply.sendTime}</div>
+											<div class="cm_item_com"><img src="../img/comment.png" height="18px"/></div>
+										</div>
+										<!-- 评论内容 -->
+										<div class="cm_item_content">
+										       ${reply.content} 
+										</div>
+										<!-- 分割线 -->
+										<div class="hrDiv"></div>
+									</div>
+								</#list>
+							</#if>
+						</div>
+					</div>
+				</div>
+		  </div>
+		  
+		  <!-- 底部浮动下载 -->
+		  <a href="http://123.57.218.131/upload/upload.html">
+			  <div class="div_dw_float">
+			  		下载邻聚，发现更多有趣的邻居
+			  </div>
+		  </a>
+	</div>
+
+</body>
+</html>

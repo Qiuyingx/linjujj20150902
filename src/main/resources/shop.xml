@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+id:商品ID
+price:商品单价
+limit:商品出售的库存数量，配置为0表示不限制出售数量
+remark:商品描述 
+ -->
+<shop>
+	<goods id="1" name="泰迪熊" price="10" limit="0" remark=""/>
+	<goods id="2" name="枕头" price="10" limit="0" remark=""/>
+	<goods id="3" name="食用油" price="10" limit="0" remark=""/>
+</shop>
+
+
